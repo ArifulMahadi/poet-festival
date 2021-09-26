@@ -2,20 +2,26 @@ import React from 'react';
 import './Poet.css'
 
 const Poet = (props) => {
-    console.log(props.poet)
+    // console.log(props)
     const {name,img,age,salary,village,identity} = props.poet
     return (
-        <div>
+        <div className="information-container">
             <div>
-               <img style={{width:'150px'}} src={img} alt="" />
+            <div>
+               <img style={{width:'200px',padding:'0 50px',margin:'10px 0'}} src={img} alt="" />
             </div>
             <div>
                <h4>{name}</h4>
                <p>age:{age}</p>
                <p>village:{village}</p>
                <p>salary:${salary}</p>
-               <h6>identity:{identity}</h6>
-               <button>add to cart</button>
+              <p> <small> identity:{identity} </small></p>
+               <button 
+               onClick = { () => props.handleAddToCart(props.poet)}
+               className = 'regular-btn'>
+                   add to cart
+                   </button>
+            </div>
             </div>
         </div>
     );

@@ -1,6 +1,15 @@
 .information-container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    text-align: center;
     background-color: violet;
+    
 }
+.regular-btn{
+    background-color: hotpink;
+    margin-bottom: 10px;
+}
+
 /* .information-container{
     width: 300px;
     display: grid;

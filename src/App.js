@@ -1,7 +1,7 @@
 
 
 import Component from './components/Component/Component';
-import './App.css';
+
 import Header from './components/Header/Header';
 
 

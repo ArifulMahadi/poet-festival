@@ -11,6 +11,11 @@ const Component = () => {
         .then(res => res.json())
         .then(data => setInformations(data))
     } ,[])
+
+      const handleAddToCart = (poet) => {
+          console.log(poet)
+      }
+
     return (
         <div className="component-container">
             <div className="poet-container">
@@ -19,6 +24,8 @@ const Component = () => {
                     infomations.map(infomation => <Poet 
                         key={infomation.name}
                         poet={infomation}
+                        handleAddToCart = {handleAddToCart}
+
                         ></Poet>)
                 }
             </div>
