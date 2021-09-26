@@ -1,14 +1,21 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee , faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
+
+
 import './Poet.css'
 
 const Poet = (props) => {
     // console.log(props)
     const {name,img,age,salary,village,identity} = props.poet
+    const element = <FontAwesomeIcon icon={faShoppingCart} />
+
     return (
         <div className="information-container">
             <div>
-            <div>
-               <img style={{width:'200px',padding:'0 50px',margin:'10px 0'}} src={img} alt="" />
+            <div className='images'>
+               <img style={{width:'150px',margin:'10px 65px'}} src={img} alt="" />
             </div>
             <div>
                <h4>{name}</h4>
@@ -19,7 +26,7 @@ const Poet = (props) => {
                <button 
                onClick = { () => props.handleAddToCart(props.poet)}
                className = 'regular-btn'>
-                   add to cart
+                 {element}   add to cart
                    </button>
             </div>
             </div>

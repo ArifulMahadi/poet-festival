@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
+import Cart from '../Cart/Cart';
 import Poet from '../Poet/Poet';
 import './Component.css'
 
 const Component = () => {
     const [infomations, setInformations] = useState([])
+    const [cart, setCart] = useState([])
+
 
     useEffect( () => {
         fetch('./data.JSON')
@@ -13,7 +16,8 @@ const Component = () => {
     } ,[])
 
       const handleAddToCart = (poet) => {
-          console.log(poet)
+          const newCart = [...cart, poet]
+          setCart(newCart)
       }
 
     return (
@@ -29,9 +33,8 @@ const Component = () => {
                         ></Poet>)
                 }
             </div>
-            <div className="cart-container">
-                <h4>poets added:</h4>
-                <p>total costs:</p>
+            <div className="cart-item">
+                <Cart cart={cart} />
             </div>
         </div>
     )

@@ -12,6 +12,6 @@
     grid-gap: 20px;
     border-radius: 10px;
 }
-.cart-container{
-    margin-left: 30px;
+.cart-item{
+    display: block;
 }

@@ -1,0 +1,12 @@
+.cart-container{
+    height: 400px;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 10px;
+    
+    background-color: grey;
+}
+.cart-container h2 {
+    color: honeydew;
+    display: block;
+}
